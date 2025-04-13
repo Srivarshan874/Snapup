@@ -1,0 +1,124 @@
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+
+export default function LaunchSnap() {
+  return (
+    <main className="bg-gray-100 text-gray-900 min-h-screen font-sans">
+      <header className="bg-black text-white text-center py-16 px-4">
+        <h1 className="text-4xl font-bold">LaunchSnap</h1>
+        <p className="text-lg text-gray-300 mt-2">
+          Launch your startup in 10 days — without a tech co-founder.
+        </p>
+      </header>
+
+      <section className="max-w-5xl mx-auto px-4 py-12">
+        <h2 className="text-3xl font-semibold text-center">What You Get</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10">
+          <Feature title="🚀 Branding Kit" desc="Logo, color palette, and font combo crafted to reflect your brand vibe." />
+          <Feature title="🌐 One-Page Website" desc="A beautiful, mobile-first landing page designed to convert visitors to users." />
+          <Feature title="📊 Pitch Deck" desc="Investor-ready 10-slide deck with powerful copy and clean visuals." />
+          <Feature title="✉️ Sales Copy" desc="Cold email and DM templates written to get replies and sales." />
+          <Feature title="📈 GTM Strategy" desc="Go-to-market plan that helps you grow fast and get users." />
+        </div>
+      </section>
+
+      <section className="max-w-5xl mx-auto px-4 py-12">
+        <h2 className="text-3xl font-semibold text-center">Pricing</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 text-center">
+          <div className="bg-white p-6 rounded-xl shadow">
+            <h3 className="text-xl font-bold mb-2">Starter</h3>
+            <p className="text-gray-600 mb-4">Perfect for MVPs</p>
+            <p className="text-2xl font-bold mb-4">₹15,000</p>
+            <ul className="text-sm text-gray-600 space-y-2">
+              <li>✔ Logo & Brand Kit</li>
+              <li>✔ Landing Page</li>
+              <li>✔ Basic Pitch Deck</li>
+            </ul>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow border-2 border-orange-500">
+            <h3 className="text-xl font-bold mb-2">Growth</h3>
+            <p className="text-gray-600 mb-4">Full Launch Kit</p>
+            <p className="text-2xl font-bold mb-4">₹30,000</p>
+            <ul className="text-sm text-gray-600 space-y-2">
+              <li>✔ Everything in Starter</li>
+              <li>✔ Sales Copy + Strategy</li>
+              <li>✔ Social Media Kit</li>
+            </ul>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow">
+            <h3 className="text-xl font-bold mb-2">Custom</h3>
+            <p className="text-gray-600 mb-4">Tailored for scale</p>
+            <p className="text-2xl font-bold mb-4">₹50,000+</p>
+            <ul className="text-sm text-gray-600 space-y-2">
+              <li>✔ Everything in Growth</li>
+              <li>✔ Custom Integrations</li>
+              <li>✔ Ongoing Support</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="max-w-4xl mx-auto px-4 py-12">
+        <h2 className="text-3xl font-semibold text-center">Testimonials</h2>
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Testimonial
+            name="Rohit S."
+            quote="LaunchSnap helped me go from idea to launch in less than 2 weeks. The branding and pitch deck blew investors away!"
+          />
+          <Testimonial
+            name="Nikita K."
+            quote="I didn’t know how to start, but this gave me everything I needed: visuals, strategy, and confidence."
+          />
+        </div>
+      </section>
+
+      <section className="bg-black text-white text-center py-12 px-4 rounded-xl max-w-3xl mx-auto mt-12">
+        <h2 className="text-3xl font-bold">Book Your Free Strategy Call</h2>
+        <p className="text-lg text-gray-300 mt-2">
+          Let's chat about your idea and how we can launch it fast — with impact.
+        </p>
+        <a
+          href="https://calendly.com/yourusername/strategy-call"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button className="mt-6 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 text-lg rounded-xl">
+            Schedule a Call
+          </Button>
+        </a>
+      </section>
+
+      <section className="max-w-3xl mx-auto px-4 py-12">
+        <h2 className="text-2xl font-semibold text-center mb-4">Contact Us</h2>
+        <form className="bg-white rounded-xl shadow p-6 space-y-4">
+          <Input placeholder="Your Name" />
+          <Input type="email" placeholder="Your Email" />
+          <textarea className="w-full p-3 border rounded-lg" placeholder="Your Message"></textarea>
+          <Button className="bg-black text-white">Send Message</Button>
+        </form>
+      </section>
+
+      <footer className="text-center text-sm text-gray-500 mt-16 pb-6">
+        &copy; 2025 LaunchSnap. Built with strategy, design, and hustle.
+      </footer>
+    </main>
+  );
+}
+
+function Feature({ title, desc }) {
+  return (
+    <div className="bg-white rounded-xl shadow p-6">
+      <h3 className="text-xl font-semibold mb-2">{title}</h3>
+      <p className="text-gray-600">{desc}</p>
+    </div>
+  );
+}
+
+function Testimonial({ name, quote }) {
+  return (
+    <div className="bg-white rounded-xl shadow p-6">
+      <p className="text-gray-700 italic">“{quote}”</p>
+      <p className="text-gray-800 mt-4 font-semibold">— {name}</p>
+    </div>
+  );
+}
